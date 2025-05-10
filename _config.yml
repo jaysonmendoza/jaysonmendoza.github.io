@@ -26,22 +26,22 @@ profile_image: ./assets/images/profile-image/avatar.jpeg
 
 # Link your resume
 # You can place your resume in assets/resume/{resume file.pdf} or add external link such as pdf saved in google drive 
-resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing
+resume-url: https://drive.google.com/file/d/1aluKyrhq7-QWlHNBLQUhlUcXrSDjdbIK/view?usp=sharing
 
 
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: test    # https://www.linkedin.com/in/{your url slug} 
-  github: leea12    # https://github.com/{your url slug} 
-  stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
-  medium:            # https://medium.com/@{your url slug} 
-  x-twitter:   # https://x.com/{your url slug} 
-  threads:            # https://threads.net/@{your url slug} 
-  instragram:       # https://instagram.com/{your url slug} 
-  youtube:           # https://youtube.com/@{your url slug} 
-  discord:            # https://discord.com/users/{your url slug} 
-  bluesky:           # https://bsky.app/profile/{your url slug} 
+  linkedin: jaysonmendoza2027/    # https://www.linkedin.com/in/{your url slug} 
+  github: jaysonschools   # https://github.com/{your url slug} 
+  #stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
+  #medium:            # https://medium.com/@{your url slug} 
+  #x-twitter:   # https://x.com/{your url slug} 
+  #threads:            # https://threads.net/@{your url slug} 
+  #instragram:       # https://instagram.com/{your url slug} 
+  #youtube:           # https://youtube.com/@{your url slug} 
+  #discord:            # https://discord.com/users/{your url slug} 
+  #bluesky:           # https://bsky.app/profile/{your url slug} 
   
 
 # Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
