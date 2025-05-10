@@ -7,17 +7,18 @@
 
 # Main Page Setup
 
-title: John Doe's Portfolio # This is what shows up in the tab of the browser
+title: Jayson Mendoza's Portfolio # This is what shows up in the tab of the browser
 
 
 
 # Hero Section
-name: John Doe
-headline: headline message
+name: Jayson Mendoza
+headline: Mechanical Engineering Student
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Greetings! I’m a college student exploring mechanical design, prototyping, and automation through hands-on projects. 
+  I’ve built things like autonomous robots and sensor systems using tools like SolidWorks, Fusion 360, Python, and MATLAB. 
+  Along the way, I’ve picked up skills in 3D printing, laser cutting, FEA, and design principles like GD&T and DFM/DFA. 
+  Everything here was built through learning, testing, and figuring things out as I go.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
