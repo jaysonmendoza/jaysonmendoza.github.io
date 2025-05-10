@@ -31,7 +31,6 @@ The ramp, shuttle base, and ball guide components were all 3D printed using PLA.
 - No part of the mechanism can start within 1 foot of the tray  
 - Mechanism must not touch the tray, person, or floor outside its footprint  
 - Entire cycle must complete in under 30 seconds  
-- Extra credit available for a second cycle within time limit
 
 ## Demo Video
 
