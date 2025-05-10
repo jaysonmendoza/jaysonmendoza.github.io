@@ -10,27 +10,25 @@ skills:
 - COTS Component Integration
 main-image: /project.webp
 ---
-## Detailed Mechanical Function
+## Mechanical Function
 
-The mechanism captures the tennis ball mid-air using a sloped ramp designed to absorb impact and redirect motion. Once collected, the ball is guided through a channel system actuated by a single input—a crank or motor trigger—driving the transport mechanism. All components are mechanically linked, ensuring the motion sequence unfolds without the need for sensors or real-time control. The mechanism maintains full clearance from the tray, user, and floor, complying with strict interaction rules.
+The mechanism uses a fixed, angled ramp to intercept a tennis ball dropped from approximately three feet. The ramp is mounted to a base and positioned so the ball makes contact after falling at least two feet, as required. The ball’s momentum carries it into a transfer channel driven by a crank-powered linear shuttle. A one-directional manual crank initiates the motion; no motor or controller is involved.
 
-## Simulation and Structural Design
+The shuttle moves the ball laterally across a six-foot span and releases it into a shallow tray. At no point does the mechanism make contact with the tray or operator. The entire operation completes within 30 seconds and is capable of resetting for an additional transfer cycle if needed.
 
-Simulation efforts focused on the ramp component, which absorbs the full energy of the falling ball. Using SolidWorks Simulation, von Mises stress analysis identified the top and bottom edges as the most vulnerable areas under load. Reinforcement ribs were added to increase stiffness and prevent deformation. This allowed the part to maintain structural integrity across repeated impacts without excessive material use.
+## Simulation-Driven Reinforcement
 
-## Part Manufacturing and Tolerancing
+SolidWorks Simulation was used to analyze stress distribution on the ramp during ball impact. Loads were applied at the impact zone, and fixed supports were placed at bolt hole locations. The von Mises analysis showed stress concentrations at the top and bottom edges of the ramp. To address this, vertical ribs were added to both sides, increasing stiffness and preventing deformation during repeated impacts.
 
-Parts were designed from scratch and fabricated via 3D printing using engineering-grade filament. All major components were dimensioned with proper tolerancing, including feature control frames and datums per GD&T standards. Fastening methods were selected to ensure rigidity and repeatable assembly without violating design rules against adhesives, string, or temporary fixes.
+## Fabrication Details
 
-## Drawing and Documentation
+The ramp, shuttle base, and ball guide components were all 3D printed using PLA. Standard hex nuts and bolts (M4) were sourced from Ace Hardware and used to fasten printed parts to a plywood base. No adhesives, tape, or temporary fasteners were used. All parts were designed to comply with rules excluding foam, cardboard, erector sets, and non-engineering materials.
 
-The complete design package includes assembly drawings, a bill of materials, and fully detailed 2D engineering drawings for two custom parts. These drawings meet industry standards and were created to support manufacturability, inspection, and functional alignment. The documentation reflects a workflow intended for physical production—not just modeling.
+## Performance Constraints
 
-## Execution Constraints
-
-- Only approved engineering materials (no foam, cardboard, or craft materials)
-- No prefabricated kits or shortcut connectors
-- No sensors, microcontrollers, or active control systems
-- Only one manual input allowed per activation
-- Maximum cycle time: 30 seconds
-
+- Ball must freefall at least 2 feet before contact  
+- Tray must be 6 feet from the ball’s release point  
+- No part of the mechanism can start within 1 foot of the tray  
+- Mechanism must not touch the tray, person, or floor outside its footprint  
+- Entire cycle must complete in under 30 seconds  
+- Extra credit available for a second cycle within time limit
