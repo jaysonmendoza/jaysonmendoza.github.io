@@ -74,15 +74,11 @@ skills:
     - GD&T ASME Y14
     - ISO fits and tolerances
    # - PLM (PTC Windchill / Arena)   
-   - category: Programming Languages
-     - Certified MATLAB Associate
-     - Python
-     - C
-  #- category: PCB Design
-   # tools:
-  #  - Altium Designer
-  #  - Altium
-   # - Eagle 
+  - category: Programming Languages
+  tools:
+    - Certified MATLAB Associate
+    - Python
+    - C
    # - KiCad
 #  - category: Problem Solving / Risk Management
 #    tools:
