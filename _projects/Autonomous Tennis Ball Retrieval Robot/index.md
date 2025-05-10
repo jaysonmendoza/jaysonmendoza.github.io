@@ -32,3 +32,9 @@ The ramp, shuttle base, and ball guide components were all 3D printed using PLA.
 - Mechanism must not touch the tray, person, or floor outside its footprint  
 - Entire cycle must complete in under 30 seconds  
 - Extra credit available for a second cycle within time limit
+
+## Demo Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cayjFbJfd4g" 
+title="Tennis Ball Transfer Mechanism Demo" frameborder="0" allowfullscreen></iframe>
+
