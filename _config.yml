@@ -75,10 +75,10 @@ skills:
     - ISO fits and tolerances
    # - PLM (PTC Windchill / Arena)   
   - category: Programming Languages
-  tools:
-    - Certified MATLAB Associate
-    - Python
-    - C
+    tools:
+      - Certified MATLAB Associate
+      - Python
+      - C
    # - KiCad
 #  - category: Problem Solving / Risk Management
 #    tools:
