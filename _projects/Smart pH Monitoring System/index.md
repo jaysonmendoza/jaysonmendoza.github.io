@@ -7,5 +7,5 @@ skills:
 - GD&T ASME Y14
 - 3D Printing
 - Arduino
-main-image: /project.webp 
+main-image: /project.webp
 ---
