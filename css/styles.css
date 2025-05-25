@@ -1047,3 +1047,25 @@ body.dark-mode #darkModeToggle:hover {
     background-color: #00bcd4;
     color: #121212;
 }
+.theme-toggle {
+  margin-left: 20px;
+  padding: 6px 12px;
+  background-color: var(--light-background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #333;
+  color: #f1f1f1;
+  border-color: #00bcd4;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #00bcd4;
+  color: #121212;
+}
