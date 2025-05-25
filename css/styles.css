@@ -19,7 +19,14 @@ body.dark-mode {
   --link-color: #4a76ee;
   --highlight-color: #0c0cf2;
 }
-
+/* COLOR USAGE STRATEGY
+   --text-color: Base text
+   --background-color: Body background
+   --light-background-color: Card/section background
+   --link-color: Inline links, buttons
+   --highlight-color: CTAs, hover states
+   --border-color: Section dividers, outlines
+*/
 
 * {
     margin: 0;
