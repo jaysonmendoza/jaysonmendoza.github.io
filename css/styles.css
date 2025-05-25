@@ -9,6 +9,17 @@
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
 }
+body.dark-mode {
+  --text-color: #f1f1f1;
+  --border-color: #333;
+  --background-color: #121212;
+  --light-background-color: #1e1e1e;
+
+  /* Keep brand colors consistent */
+  --link-color: #4a76ee;
+  --highlight-color: #0c0cf2;
+}
+
 
 * {
     margin: 0;
