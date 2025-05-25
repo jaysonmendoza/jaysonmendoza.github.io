@@ -147,6 +147,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  certifications:
+    output: true
+    permalink: /certifications/:path/
 
 
 markdown: kramdown
