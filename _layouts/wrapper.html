@@ -23,59 +23,56 @@
   <!-- NAVBAR -->
   {% include navbar.html %}
 
-  <!-- 🌙 Dark mode toggle only on homepage -->
+  <!-- 🌙 DARK MODE TOGGLE + POPUP ONLY ON HOMEPAGE -->
   {% if page.url == "/" %}
     <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
-
-    <!-- 🌙 Dark mode support popup -->
     <div id="themeTipToast" class="theme-toast" role="alert">
       🌙 This site supports Dark Mode.
     </div>
   {% endif %}
 
-  <!-- Main page content -->
+  <!-- MAIN PAGE CONTENT -->
   <div class="page">{{ content }}</div>
 
   <!-- FOOTER -->
   {% include footer.html %}
 
-  <!-- 🌙 Theme + popup script only on homepage -->
-  {% if page.url == "/" %}
-    <script>
-      const toggle = document.getElementById('darkModeToggle');
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  <!-- 🌙 DARK MODE THEME LOGIC (RUNS ON ALL PAGES) -->
+  <script>
+    // Apply saved or system-preferred theme on page load (all pages)
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark-mode');
+    }
 
-      const applyTheme = (isDark) => {
-        document.body.classList.toggle('dark-mode', isDark);
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        if (toggle) {
-          toggle.textContent = isDark ? '🌞' : '🌙';
-        }
-      };
+    // Extra logic ONLY for homepage
+    {% if page.url == "/" %}
+    const toggle = document.getElementById('darkModeToggle');
 
-      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        applyTheme(true);
-      } else {
-        applyTheme(false);
-      }
+    const applyTheme = (isDark) => {
+      document.body.classList.toggle('dark-mode', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      if (toggle) toggle.textContent = isDark ? '🌞' : '🌙';
+    };
 
-      if (toggle) {
-        toggle.addEventListener('click', () => {
-          const isDark = document.body.classList.contains('dark-mode');
-          applyTheme(!isDark);
-        });
-      }
+    // Set button label on load
+    if (toggle) {
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+      toggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        applyTheme(!isDark);
+      });
+    }
 
-      const toast = document.getElementById('themeTipToast');
-      if (toast) {
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, 5000);
-      }
-    </script>
-  {% endif %}
+    // Show popup toast
+    const toast = document.getElementById('themeTipToast');
+    if (toast) {
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 5000);
+    }
+    {% endif %}
+  </script>
 
 </body>
 </html>
