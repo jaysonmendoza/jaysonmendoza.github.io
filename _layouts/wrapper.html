@@ -23,54 +23,59 @@
   <!-- NAVBAR -->
   {% include navbar.html %}
 
+  <!-- 🌙 Dark mode toggle only on homepage -->
+  {% if page.url == "/" %}
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+
+    <!-- 🌙 Dark mode support popup -->
+    <div id="themeTipToast" class="theme-toast" role="alert">
+      🌙 This site supports Dark Mode.
+    </div>
+  {% endif %}
+
   <!-- Main page content -->
   <div class="page">{{ content }}</div>
 
   <!-- FOOTER -->
   {% include footer.html %}
 
-  <!-- 🌙 Dark mode support popup -->
-  <div id="themeTipToast" class="theme-toast" role="alert">
-    🌙 This site supports Dark Mode.
-  </div>
+  <!-- 🌙 Theme + popup script only on homepage -->
+  {% if page.url == "/" %}
+    <script>
+      const toggle = document.getElementById('darkModeToggle');
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  <!-- 🌙 Theme + popup script -->
-  <script>
-    // Theme toggle logic
-    const toggle = document.getElementById('darkModeToggle');
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const applyTheme = (isDark) => {
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (toggle) {
+          toggle.textContent = isDark ? '🌞' : '🌙';
+        }
+      };
 
-    const applyTheme = (isDark) => {
-      document.body.classList.toggle('dark-mode', isDark);
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      if (toggle) {
-        toggle.textContent = isDark ? '🌞' : '🌙';
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        applyTheme(true);
+      } else {
+        applyTheme(false);
       }
-    };
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      applyTheme(true);
-    } else {
-      applyTheme(false);
-    }
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const isDark = document.body.classList.contains('dark-mode');
+          applyTheme(!isDark);
+        });
+      }
 
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        const isDark = document.body.classList.contains('dark-mode');
-        applyTheme(!isDark);
-      });
-    }
-
-    // 🚀 Show the dark mode toast on every page load
-    const toast = document.getElementById('themeTipToast');
-    if (toast) {
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 5000);
-    }
-  </script>
+      const toast = document.getElementById('themeTipToast');
+      if (toast) {
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 5000);
+      }
+    </script>
+  {% endif %}
 
 </body>
 </html>
