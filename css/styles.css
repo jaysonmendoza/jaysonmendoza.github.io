@@ -52,6 +52,13 @@ a {
     text-decoration: none;
 }
 
+a:hover,
+a:focus {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+
 h1 {
     color: var(--text-color);
     font-size: calc(14px + 1.0vw); /* Base size of 20px, increases with viewport width */
@@ -324,7 +331,7 @@ nav .mobile-nav {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -501,13 +508,12 @@ nav .mobile-nav {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: var(--link-color);
-    border:none;
+    background-color: var(--highlight-color);
+    border: none;
     height: 50px;
     cursor: pointer;
-    transition: 0.1s
+    transition: 0.1s;
 }
-
 
 /* FOOTER */
 
@@ -590,7 +596,7 @@ footer p {
 
 .post-view {
     margin: 25px auto;
-    border: 1px solid rgba(0, 0, 0, 0.05);    
+    border: 1px solid var(--border-color);    
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                   0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 10px
