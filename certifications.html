@@ -1,0 +1,17 @@
+---
+layout: default
+title: Certifications
+---
+
+<h1>Certifications</h1>
+<ul>
+  {% for cert in site.certifications %}
+    <li>
+      <strong>{{ cert.title }}</strong> – {{ cert.issuer }} ({{ cert.date | date: "%B %Y" }})
+      {% if cert.link %}
+        – <a href="{{ cert.link }}" target="_blank">Verify</a>
+      {% endif %}
+      <p>{{ cert.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
