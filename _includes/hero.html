@@ -1,6 +1,5 @@
-
 <!-- SECTION 1: Hero -->
-<section class="hero-section">
+<section class="hero-section fade-in" tabindex="0">
     <div class="group">
         <div class="text">
             <h2>
@@ -12,64 +11,55 @@
                         {% if site.external-links[platform] %}
                             {% case platform %}
                             {% when 'linkedin' %}
-                            <a href="https://www.linkedin.com/in/{{ site.external-links[platform] }}/" target="_blank">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        
+                                <a href="https://www.linkedin.com/in/{{ site.external-links[platform] }}/" target="_blank" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
                             {% when 'github' %}
-                                <a href="https://github.com/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://github.com/{{ site.external-links[platform] }}/" target="_blank" aria-label="GitHub">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
-                            
                             {% when 'stackoverflow' %}
-                                <a href="https://stackoverflow.com/users/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://stackoverflow.com/users/{{ site.external-links[platform] }}/" target="_blank" aria-label="Stack Overflow">
                                     <i class="fa-brands fa-stack-overflow"></i>
                                 </a>
-                            
                             {% when 'discord' %}
-                                <a href="https://discord.com/users/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://discord.com/users/{{ site.external-links[platform] }}/" target="_blank" aria-label="Discord">
                                     <i class="fa-brands fa-discord"></i>
                                 </a>
-                            
                             {% when 'medium' %}
-                                <a href="https://medium.com/@{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://medium.com/@{{ site.external-links[platform] }}/" target="_blank" aria-label="Medium">
                                     <i class="fa-brands fa-medium"></i>
                                 </a>
-                            
                             {% when 'x-twitter' %}
-                                <a href="https://x.com/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://x.com/{{ site.external-links[platform] }}/" target="_blank" aria-label="Twitter">
                                     <i class="fa-brands fa-x-twitter"></i>
                                 </a>
-                            
                             {% when 'threads' %}
-                                <a href="https://threads.net/@{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://threads.net/@{{ site.external-links[platform] }}/" target="_blank" aria-label="Threads">
                                     <i class="fa-brands fa-threads"></i>
                                 </a>
-                            
                             {% when 'bluesky' %}
-                                <a href="https://bsky.app/profile/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://bsky.app/profile/{{ site.external-links[platform] }}/" target="_blank" aria-label="Bluesky">
                                     <i class="fa-solid fa-cloud"></i>
                                 </a>
-                            
                             {% when 'instagram' %}
-                                <a href="https://instagram.com/{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://instagram.com/{{ site.external-links[platform] }}/" target="_blank" aria-label="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
-                            
                             {% when 'youtube' %}
-                                <a href="https://youtube.com/@{{ site.external-links[platform] }}/" target="_blank">
+                                <a href="https://youtube.com/@{{ site.external-links[platform] }}/" target="_blank" aria-label="YouTube">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
-
                             {% endcase %}
                         {% endif %}
                     {% endfor %}
                 </span>
                 {% endif %}
             </h2>
-            
-            <h3> {{site.headline}} </h3>
-            <p> {{site.description}}</p>
+
+            <h3>{{ site.headline }}</h3>
+            <p>{{ site.description }}</p>
+
             <div class="links">
                 <a href="#projects">
                     <i class="fa-solid fa-pen"></i>
@@ -84,12 +74,38 @@
                     <span>Contact Me</span>
                 </a>
             </div>
-            
+
+            <!-- Dark Mode Toggle -->
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌓 Toggle Dark Mode</button>
         </div>
+
         <div class="headshot">
-            <img src= {{site.profile_image}} alt="john doe headshot">       
+            <img src="{{ site.profile_image }}" alt="{{ site.name }} headshot" loading="lazy">
         </div>
     </div>
-    
 </section>
 
+<!-- Smooth Scroll and Dark Mode Script -->
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Dark mode toggle
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+</script>
