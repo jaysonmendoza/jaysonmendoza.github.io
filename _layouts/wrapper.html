@@ -60,17 +60,16 @@
     });
   }
 
-  // 🌙 Show toast tip once
-  if (!localStorage.getItem('themeTipShown')) {
-    const toast = document.getElementById('themeTipToast');
-    if (toast) {
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 5000);
-      localStorage.setItem('themeTipShown', 'true');
-    }
+<script>
+  const toast = document.getElementById('themeTipToast');
+  if (toast) {
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 5000);
   }
+</script>
+
 </script>
 
 </body>
