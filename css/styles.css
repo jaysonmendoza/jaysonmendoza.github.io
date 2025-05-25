@@ -320,7 +320,7 @@ nav .mobile-nav {
     height: 100%; /* Take full height of grid cell */
     box-sizing: border-box;
     padding: 15px;
-    background: var(--background-color);
+    background-color: var(--light-background-color);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
@@ -424,9 +424,10 @@ nav .mobile-nav {
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.05);    
+    background-color: var(--light-background-color);   /* ✅ added */
+    border: 1px solid var(--border-color);             /* ✅ changed */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
    }
 
 .skills-section .skill-categories .category-label {
@@ -459,10 +460,11 @@ nav .mobile-nav {
 .contact-section {
     padding: 25px 25px;
     max-width: 600px;
-    margin: 0 auto; 
-    border-radius: 20px; 
+    margin: 0 auto;
+    border-radius: 20px;
     margin-bottom: 100px;
-      
+    background-color: var(--light-background-color); /* ← added */
+    border: 1px solid var(--border-color);           /* ← added */
 }
 
 .contact-section h2 {
