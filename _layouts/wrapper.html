@@ -34,7 +34,7 @@
       🌓 You can switch between dark and light mode in the top right.
     </div>
     
-    <script>
+<script>
   const toggle = document.getElementById('darkModeToggle');
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -59,8 +59,19 @@
       applyTheme(!isDark);
     });
   }
-</script>
 
+  // 🌙 Show toast tip once
+  if (!localStorage.getItem('themeTipShown')) {
+    const toast = document.getElementById('themeTipToast');
+    if (toast) {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+      localStorage.setItem('themeTipShown', 'true');
+    }
+  }
+</script>
 
 </body>
 </html>
