@@ -1100,3 +1100,22 @@ body.dark-mode .theme-toast {
 .cert-list li {
   margin-bottom: 2em;
 }
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cert-item img.cert-image {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.cert-item .cert-text {
+  flex: 1;
+  min-width: 250px;
+}
