@@ -1,20 +1,16 @@
----
-layout: wrapper
-title: Certifications
----
-
 <ul class="cert-list">
   {% for cert in site.certifications %}
-    <li>
-      <strong>{{ cert.title }}</strong> – {{ cert.issuer }} ({{ cert.date | date: "%B %Y" }})
-      {% if cert.link %}
-        – <a href="{{ cert.link }}" target="_blank">Verify</a>
-      {% endif %}
-      <p>{{ cert.content | markdownify }}</p>
-
+    <li class="cert-item">
       {% if cert.image %}
-        <img src="{{ cert.image | relative_url }}" alt="{{ cert.title }} Certificate" width="400">
+        <img src="{{ cert.image | relative_url }}" alt="{{ cert.title }} Certificate" class="cert-image">
       {% endif %}
+      <div class="cert-text">
+        <strong>{{ cert.title }}</strong> – {{ cert.issuer }} ({{ cert.date | date: "%B %Y" }})
+        {% if cert.link %}
+          – <a href="{{ cert.link }}" target="_blank">Verify</a>
+        {% endif %}
+        <p>{{ cert.content | markdownify }}</p>
+      </div>
     </li>
   {% endfor %}
 </ul>
