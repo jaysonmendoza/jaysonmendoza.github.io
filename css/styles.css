@@ -1097,25 +1097,27 @@ body.dark-mode .theme-toast {
   color: #f1f1f1;
   border-color: #444;
 }
-.cert-list li {
-  margin-bottom: 2em;
+.cert-list {
+  list-style: none;
+  padding: 0;
 }
+
 .cert-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.cert-item img.cert-image {
-  width: 140px;
+.cert-image {
+  width: 150px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.cert-item .cert-text {
+.cert-text {
   flex: 1;
   min-width: 250px;
 }
