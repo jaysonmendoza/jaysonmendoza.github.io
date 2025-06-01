@@ -11,6 +11,10 @@ title: Certifications
         – <a href="{{ cert.link }}" target="_blank">Verify</a>
       {% endif %}
       <p>{{ cert.content | markdownify }}</p>
+
+      {% if cert.image %}
+        <img src="{{ cert.image | relative_url }}" alt="{{ cert.title }} Certificate" width="400">
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
