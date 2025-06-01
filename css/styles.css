@@ -1121,3 +1121,6 @@ body.dark-mode .theme-toast {
   flex: 1;
   min-width: 250px;
 }
+.cert-item.right-image {
+  flex-direction: row-reverse;
+}
