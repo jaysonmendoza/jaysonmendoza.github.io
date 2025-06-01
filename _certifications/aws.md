@@ -1,8 +1,8 @@
 ---
-title: AWS Certified Solutions Architect – Associate
-issuer: Amazon Web Services
-date: 2023-06-15
-link: https://www.credly.com/badges/example-link
+title: Certified 3DEXPERIENCE Collaborative Business & Industry Innovator - Associate
+issuer: Dassault Systèmes
+link: https://www.credly.com/badges/example-link](https://www.credly.com/badges/5687b482-b1e4-4975-9fb5-e7ae9cfc203c/public_url
 ---
-
-Earned the AWS Certified Solutions Architect – Associate credential. Demonstrated ability to design distributed systems on AWS.
+title: Certified 3DEXPERIENCE 3D Innovator - Associate
+issuer: Dassault Systèmes
+link: https://www.credly.com/badges/example-link](https://www.credly.com/badges/5687b482-b1e4-4975-9fb5-e7ae9cfc203c/public_url](https://www.credly.com/badges/82607731-bae2-43df-bc85-560feb8af911/public_url
