@@ -46,25 +46,12 @@ external-links:    # input only your own url slug. The icons with missing entrie
 skills:
   - category: CAD
     tools:
-    - Onshape
     - Solidworks
-    - Creo
-    - Fusion 360 (Autodesk)
-    - Blender (for complex shapes or animations)
-    - Siemens NX
-    - Inventor (Autodesk)
     - CATIA (Dassault Systèmes)
+    - ANSYS
   - category: Prototyping
     tools:
-    - SLA
-    - CNC
-    - FDM
-    - SLS
-    - DMLS
     - PolyJet Printing
-    - Vacuum Casting
-    - Laser Cutting
-    - Water Jet Cutting
     - Arduino / Raspberry Pi
     - Breadboarding for circuit testing
   - category: Design Standards / Practices
@@ -74,9 +61,11 @@ skills:
    # - PLM (PTC Windchill / Arena)   
   - category: Programming Languages
     tools:
-      - Certified MATLAB Associate
+      - MATLAB 
+      - Simulink
       - Python
       - C
+      - SQL
    # - KiCad
 #  - category: Problem Solving / Risk Management
 #    tools:
