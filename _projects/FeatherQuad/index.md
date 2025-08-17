@@ -6,16 +6,26 @@ published: true
 
 # FeatherQuad – Micro Quadcopter Project
 
+---
+
+## Project Overview
 This project is our micro quadcopter build for practice in the 3DPAC Rotary Wing competition.  
-The airframe will be 3D-printed, and all electronics are commercial off-the-shelf (COTS).
+The airframe will be 3D-printed, and all electronics are commercial off-the-shelf (COTS).  
 
 I will be updating this page regularly as I make progress on the design, printing, wiring, and testing.  
 Check back often to follow along with the build process!
 
 ---
 
-## COTS Parts List
+## Skills Used
+- 3D printing (airframe design & fabrication)  
+- CAD modeling  
+- Electronics integration (motors, ESC, flight controller, RX)  
+- RC flight setup and tuning  
 
+---
+
+## COTS Parts List
 | Component | Count | Mass (g) | Link | Price (USD) |
 |-----------|-------|----------|------|-------------|
 | Racerstar 1103 8000KV Motors | 4 | ~20 | [Link](https://www.aliexpress.com/item/4001200322569.html) | $25 (set of 4) |
@@ -29,4 +39,5 @@ Check back often to follow along with the build process!
 ---
 
 ## 💰 Estimated Total Cost
-**$115–120 USD**
+- **Aircraft only (without TX + charger):** ~$98  
+- **Full starter kit (with TX + charger):** ~$158 (before tax/shipping)
