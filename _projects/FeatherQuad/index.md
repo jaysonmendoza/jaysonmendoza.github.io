@@ -1,11 +1,15 @@
 ---
 layout: post
 title: FeatherQuad
+description: A micro quadcopter built for practice in the 3DPAC Rotary Wing competition. The airframe is fully 3D-printed, and electronics are commercial off-the-shelf (COTS). This project documents the design, printing, wiring, and testing process with regular updates as progress is made.
+skills:
+- CAD Design
+- 3D Printing
+- Electronics Integration
+- Soldering
+- Flight Tuning
+main-image: /featherquad.webp
 published: true
----
-
-# FeatherQuad – Micro Quadcopter Project
-
 ---
 
 ## Project Overview
@@ -14,14 +18,6 @@ The airframe will be 3D-printed, and all electronics are commercial off-the-shel
 
 I will be updating this page regularly as I make progress on the design, printing, wiring, and testing.  
 Check back often to follow along with the build process!
-
----
-
-## Skills Used
-- 3D printing (airframe design & fabrication)  
-- CAD modeling  
-- Electronics integration (motors, ESC, flight controller, RX)  
-- RC flight setup and tuning  
 
 ---
 
@@ -41,3 +37,4 @@ Check back often to follow along with the build process!
 ## 💰 Estimated Total Cost
 - **Aircraft only (without TX + charger):** ~$98  
 - **Full starter kit (with TX + charger):** ~$158 (before tax/shipping)
+
