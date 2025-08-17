@@ -1,4 +1,4 @@
-# COTS Parts List – Micro Quadcopter
+COTS Parts List – Micro Quadcopter
 
 | Component | Count | Mass (g) | Link | Price (USD) |
 |-----------|-------|----------|------|-------------|
