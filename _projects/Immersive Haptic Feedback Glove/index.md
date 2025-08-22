@@ -25,3 +25,9 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 - A flex sensor was wired into a voltage divider circuit with an Arduino UNO.  
 - Raw analog values were smoothed with an exponential moving average for stability.  
 - The readings were displayed on the Serial Monitor, showing live response as the finger bent.  
+
+![Arduino IDE Serial Output](/assets/arduino_flex_sensor_serial_output.png)  
+*Smoothed flex sensor readings in Arduino IDE Serial Monitor*  
+
+![Arduino Flex Sensor Circuit](/assets/arduino_flex_sensor_circuit_setup.png)  
+*Circuit setup with Arduino UNO, breadboard, and flex sensor*
