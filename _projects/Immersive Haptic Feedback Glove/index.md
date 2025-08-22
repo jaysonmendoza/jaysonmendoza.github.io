@@ -27,25 +27,6 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 - The readings were displayed on the Serial Monitor, showing live response as the finger bent.  
 
 This validated the foundation for finger-tracking in the glove.  
-{% raw %}
-```cpp
-int flexs = A0;
-float smoothed = 0;
+![Flex sensor prototype wiring](path/to/image1.jpg)
+![Arduino IDE code running](path/to/image2.png)
 
-void setup() {
-  Serial.begin(9600);
-}
-
-void loop() {
-  int raw = analogRead(flexs);
-
-  // exponential moving average
-  smoothed = 0.9 * smoothed + 0.1 * raw;
-
-  Serial.print("Raw: ");
-  Serial.print(raw);
-  Serial.print("  Smoothed: ");
-  Serial.println(smoothed);
-
-  delay(100);
-}
