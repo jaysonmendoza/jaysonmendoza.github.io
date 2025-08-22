@@ -27,7 +27,6 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 - The readings were displayed on the Serial Monitor, showing live response as the finger bent.  
 
 This validated the foundation for finger-tracking in the glove.  
-
 {% raw %}
 ```cpp
 int flexs = A0;
@@ -47,9 +46,6 @@ void loop() {
   Serial.print(raw);
   Serial.print("  Smoothed: ");
   Serial.println(smoothed);
-
-  delay(100);
-}
 
   delay(100);
 }
