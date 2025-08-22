@@ -32,3 +32,12 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
      alt="Arduino Flex Sensor Circuit" 
      style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto; transform: rotate(-90deg);"/>  
 *Circuit setup with Arduino UNO, breadboard, and flex sensor*  
+## Components Used
+- **Arduino UNO R3 (Elegoo)**
+- **Solderless breadboard**
+- **Flex sensor (strip-type)**
+- **Resistor (~10 kΩ):** voltage divider
+- **Capacitor (10 µF, electrolytic):** signal smoothing
+- **Jumper wires (male-to-male)**
+- **Jumper wires (male-to-female)**
+- **USB cable (Type A to B)**
