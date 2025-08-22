@@ -7,7 +7,6 @@ skills:
 - Microcontroller Programming (C++/Arduino IDE)
 - Sensor Integration (Flex Sensors, IMU)
 - Haptic Feedback (Vibration Motors, Force Actuators)
-- CAD Modeling & 3D Printing
 main-image: 
 ---
 
