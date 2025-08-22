@@ -28,6 +28,7 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 
 This validated the foundation for finger-tracking in the glove.  
 
+```cpp
 int flexs = A0;
 float smoothed = 0;
 
