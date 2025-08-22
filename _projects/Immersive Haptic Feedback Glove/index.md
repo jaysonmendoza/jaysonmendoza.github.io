@@ -28,17 +28,23 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 
 This validated the foundation for finger-tracking in the glove.  
 
-```cpp
 int flexs = A0;
-float data = 0;
+float smoothed = 0;
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  int reading = analogRead(flexs);
-  data = 0.9 * data + 0.1 * reading;  // smoothing
-  Serial.println(data);
+  int raw = analogRead(flexs);
+
+  // exponential moving average
+  smoothed = 0.9 * smoothed + 0.1 * raw;
+
+  Serial.print("Raw: ");
+  Serial.print(raw);
+  Serial.print("  Smoothed: ");
+  Serial.println(smoothed);
+
   delay(100);
 }
