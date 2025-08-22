@@ -25,8 +25,3 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 - A flex sensor was wired into a voltage divider circuit with an Arduino UNO.  
 - Raw analog values were smoothed with an exponential moving average for stability.  
 - The readings were displayed on the Serial Monitor, showing live response as the finger bent.  
-
-This validated the foundation for finger-tracking in the glove.  
-![Flex sensor prototype wiring](path/to/image1.jpg)
-![Arduino IDE code running](path/to/image2.png)
-
