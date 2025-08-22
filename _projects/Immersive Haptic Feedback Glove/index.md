@@ -28,6 +28,7 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 
 <img src="/assets/arduino_flex_sensor_serial_output.png" alt="Arduino IDE Serial Output" style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto;"/>  
 *Smoothed flex sensor readings in Arduino IDE Serial Monitor*  
-
-<img src="/assets/arduino_flex_sensor_circuit_setup.png" alt="Arduino Flex Sensor Circuit" style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto;"/>  
+<img src="/assets/arduino_flex_sensor_circuit_setup.png" 
+     alt="Arduino Flex Sensor Circuit" 
+     style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto; transform: rotate(-90deg);"/>  
 *Circuit setup with Arduino UNO, breadboard, and flex sensor*  
