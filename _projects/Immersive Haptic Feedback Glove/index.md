@@ -26,8 +26,8 @@ The first milestone was demonstrating that a **flex sensor** could accurately tr
 - Raw analog values were smoothed with an exponential moving average for stability.  
 - The readings were displayed on the Serial Monitor, showing live response as the finger bent.  
 
-![Arduino IDE Serial Output](/assets/arduino_flex_sensor_serial_output.png)  
+<img src="/assets/arduino_flex_sensor_serial_output.png" alt="Arduino IDE Serial Output" style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto;"/>  
 *Smoothed flex sensor readings in Arduino IDE Serial Monitor*  
 
-![Arduino Flex Sensor Circuit](/assets/arduino_flex_sensor_circuit_setup.png)  
-*Circuit setup with Arduino UNO, breadboard, and flex sensor*
+<img src="/assets/arduino_flex_sensor_circuit_setup.png" alt="Arduino Flex Sensor Circuit" style="max-width:600px; width:100%; height:auto; display:block; margin:1rem auto;"/>  
+*Circuit setup with Arduino UNO, breadboard, and flex sensor*  
