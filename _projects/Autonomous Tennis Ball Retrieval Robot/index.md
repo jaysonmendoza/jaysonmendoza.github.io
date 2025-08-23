@@ -20,6 +20,22 @@ The shuttle moves the ball laterally across a six-foot span and releases it into
 
 SolidWorks Simulation was used to analyze stress distribution on the ramp during ball impact. Loads were applied at the impact zone, and fixed supports were placed at bolt hole locations. The von Mises analysis showed stress concentrations at the top and bottom edges of the ramp. To address this, vertical ribs were added to both sides, increasing stiffness and preventing deformation during repeated impacts.
 
+## Animations
+
+The following frames show the motion study performed in SolidWorks, demonstrating how the shuttle system captures and delivers the tennis ball. The sequence verifies that the design meets the time and distance requirements.
+
+![Animation 1](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20ANIM%201.png)  
+*Initial ball drop approaching the shuttle system.*
+
+![Animation 2](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20ANIM%202.png)  
+*Ball guided into the shuttle body for transfer.*
+
+![Animation 3](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20ANIM%203.png)  
+*Shuttle moving ball towards the tray with controlled motion.*
+
+![Animation 4](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20ANIM%204.png)  
+*Final release of the ball into the tray at the target position.*
+
 ## Fabrication Details
 
 The ramp, shuttle base, and ball guide components were all 3D printed using PLA. Standard hex nuts and bolts (M4) were sourced from Ace Hardware and used to fasten printed parts to a plywood base. No adhesives, tape, or temporary fasteners were used. All parts were designed to comply with rules excluding foam, cardboard, erector sets, and non-engineering materials.
@@ -34,7 +50,7 @@ The ramp, shuttle base, and ball guide components were all 3D printed using PLA.
 
 ## Assembly Pictures
 
-Here are photos of the assembly at different stages:
+Here are photos of the assembly at different persspectives:
 
 ![Assembly Picture 1](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20PIC%201.png)
 ![Assembly Picture 2](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20PIC%202.png)
