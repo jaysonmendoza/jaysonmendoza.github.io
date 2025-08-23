@@ -32,6 +32,14 @@ The ramp, shuttle base, and ball guide components were all 3D printed using PLA.
 - Mechanism must not touch the tray, person, or floor outside its footprint  
 - Entire cycle must complete in under 30 seconds  
 
+## Assembly Pictures
+
+Here are photos of the assembly at different stages:
+
+![Assembly Picture 1](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20PIC%201.png)
+![Assembly Picture 2](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20PIC%202.png)
+![Assembly Picture 3](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20PIC%203.png)
+
 ## Demo Video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cayjFbJfd4g" 
