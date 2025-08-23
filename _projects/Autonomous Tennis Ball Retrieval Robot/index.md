@@ -28,8 +28,9 @@ The shuttle moves the ball laterally across a six-foot span and releases it into
 
 SolidWorks Simulation was used to analyze stress distribution on the ramp during ball impact. Loads were applied at the impact zone, and fixed supports were placed at bolt hole locations. The von Mises analysis showed stress concentrations at the top and bottom edges of the ramp. To address this, vertical ribs were added to both sides, increasing stiffness and preventing deformation during repeated impacts.
 
-![Simulation Analysis](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20SIM%201.png)  
-*Von Mises stress plot showing high-stress regions at the ramp edges.*
+<img src="/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20SIM%201.png" alt="Simulation Analysis" style="max-width:100%; height:auto;">
+<p><em>Von Mises stress plot showing high-stress regions at the ramp edges.</em></p>
+
 
 ## Animations
 
