@@ -15,9 +15,9 @@ title: Jayson Mendoza's Portfolio # This is what shows up in the tab of the brow
 name: Jayson Mendoza
 headline: Mechanical Engineering Student
 description: >- # dont remove this line. this will ignore all new lines until the next section
-Greetings! I’m a college student exploring mechanical design, prototyping, and automation through hands-on projects. I work with tools like SolidWorks, Python, and MATLAB while building skills in 3D printing, laser cutting, FEA, and GD&T.
-Everything in my portfolio reflects a process of curiosity, experimentation, and iteration. I enjoy tackling challenges step by step, turning ideas into functional designs, and pushing myself to grow with each project.
-
+  Greetings! I’m a college student exploring mechanical design, prototyping, and automation through hands-on projects. I work with tools like SolidWorks, Python, and MATLAB while building skills in 3D printing, laser cutting, FEA, and GD&T.
+  
+  Everything in my portfolio reflects a process of curiosity, experimentation, and iteration. I enjoy tackling challenges step by step, turning ideas into functional designs, and pushing myself to grow with each project.
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: assets/images/profile-image/tryiton__navy_suit_white_shirt_blue_tie_green_foliage_ston_197966.jpg
 # Link your resume
