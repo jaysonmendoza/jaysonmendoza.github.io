@@ -16,6 +16,14 @@ The mechanism uses a fixed, angled ramp to intercept a tennis ball dropped from 
 
 The shuttle moves the ball laterally across a six-foot span and releases it into a shallow tray. At no point does the mechanism make contact with the tray or operator. The entire operation completes within 30 seconds and is capable of resetting for an additional transfer cycle if needed.
 
+## Performance Constraints
+
+- Ball must freefall at least 2 feet before contact  
+- Tray must be 6 feet from the ball’s release point  
+- No part of the mechanism can start within 1 foot of the tray  
+- Mechanism must not touch the tray, person, or floor outside its footprint  
+- Entire cycle must complete in under 30 seconds  
+
 ## Simulation-Driven Reinforcement
 
 SolidWorks Simulation was used to analyze stress distribution on the ramp during ball impact. Loads were applied at the impact zone, and fixed supports were placed at bolt hole locations. The von Mises analysis showed stress concentrations at the top and bottom edges of the ramp. To address this, vertical ribs were added to both sides, increasing stiffness and preventing deformation during repeated impacts.
@@ -46,13 +54,19 @@ The ramp, shuttle base, and ball guide components were all 3D printed using PLA.
 ![COTS Components](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20COTS.png)  
 *Commercial off-the-shelf hardware (M4 bolts and hex nuts) used for fastening 3D-printed parts.*
 
-## Performance Constraints
+## Engineering Drawings
 
-- Ball must freefall at least 2 feet before contact  
-- Tray must be 6 feet from the ball’s release point  
-- No part of the mechanism can start within 1 foot of the tray  
-- Mechanism must not touch the tray, person, or floor outside its footprint  
-- Entire cycle must complete in under 30 seconds  
+The engineering drawings provide full fabrication and assembly details of the tennis ball retrieval robot. They include an exploded assembly with bill of materials, detail views with precise dimensions, and GD&T annotations for accurate fit and repeatability.
+
+![Assembly Drawing](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20DRAW%201.png)  
+*Exploded assembly view showing all components, fasteners, and bill of materials for the complete mechanism.*
+
+![Ramp Cover Detail](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20DRAW%202.png)  
+*Detail drawing of the ramp cover with orthographic projections, section views, dimensions, and GD&T callouts.*
+
+![Component Detail](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20DRAW%203.png)  
+*Dimensioned part drawing with tolerance specifications, ensuring manufacturability and consistent assembly fit.*
+
 
 ## Assembly Pictures
 
