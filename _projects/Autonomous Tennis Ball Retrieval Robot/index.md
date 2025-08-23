@@ -43,6 +43,9 @@ The following frames show the motion study performed in SolidWorks, demonstratin
 
 The ramp, shuttle base, and ball guide components were all 3D printed using PLA. Standard hex nuts and bolts (M4) were sourced from Ace Hardware and used to fasten printed parts to a plywood base. No adhesives, tape, or temporary fasteners were used. All parts were designed to comply with rules excluding foam, cardboard, erector sets, and non-engineering materials.
 
+![COTS Components](/_projects/Autonomous%20Tennis%20Ball%20Retrieval%20Robot/CHP%20COTS.png)  
+*Commercial off-the-shelf hardware (M4 bolts and hex nuts) used for fastening 3D-printed parts.*
+
 ## Performance Constraints
 
 - Ball must freefall at least 2 feet before contact  
