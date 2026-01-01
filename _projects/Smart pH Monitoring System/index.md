@@ -46,8 +46,6 @@ Acid and base are kept in separate containers with dedicated tubing.
 
 ## Arduino Code
 
-<div style="max-width: 900px; overflow-x: auto;">
-
 ```cpp
 #include <LiquidCrystal.h>
 
@@ -86,7 +84,7 @@ void setup() {
 }
 
 void loop() {
-  // ===== WAIT FOR USER INPUT =====
+
   if (!phSet) {
     if (Serial.available() > 0) {
       desiredPH = Serial.parseFloat();
@@ -104,13 +102,11 @@ void loop() {
     return;
   }
 
-  // ===== READ pH SENSOR =====
   for (int i = 0; i < 10; i++) {
     buf[i] = analogRead(SensorPin);
     delay(10);
   }
 
-  // sort readings (low -> high)
   for (int i = 0; i < 9; i++) {
     for (int j = i + 1; j < 10; j++) {
       if (buf[i] > buf[j]) {
@@ -121,7 +117,6 @@ void loop() {
     }
   }
 
-  // average middle values to reduce noise
   avgValue = 0;
   for (int i = 2; i < 8; i++) {
     avgValue += buf[i];
@@ -130,7 +125,6 @@ void loop() {
   float currentPH = (float)avgValue * 5.0 / 1024.0 / 6.0;
   currentPH = 3.5 * currentPH;
 
-  // ===== LCD DISPLAY =====
   lcd.setCursor(0, 0);
   lcd.print("pH:");
   lcd.print(currentPH, 2);
@@ -139,16 +133,17 @@ void loop() {
 
   lcd.setCursor(0, 1);
 
-  // ===== CONTROL =====
   if (currentPH < desiredPH - tolerance) {
     digitalWrite(basePump, LOW);
     digitalWrite(acidPump, HIGH);
     lcd.print("Adding BASE   ");
-  } else if (currentPH > desiredPH + tolerance) {
+  }
+  else if (currentPH > desiredPH + tolerance) {
     digitalWrite(acidPump, LOW);
     digitalWrite(basePump, HIGH);
     lcd.print("Adding ACID   ");
-  } else {
+  }
+  else {
     digitalWrite(acidPump, HIGH);
     digitalWrite(basePump, HIGH);
     lcd.print("pH STABLE     ");
@@ -156,3 +151,4 @@ void loop() {
 
   delay(1000);
 }
+
