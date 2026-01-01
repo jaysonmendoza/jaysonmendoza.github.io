@@ -44,9 +44,9 @@ The final system demonstrates automatic sensing, decision-making, and actuation 
 
 ## Build Photos
 
-![Build Photo 1](/_projects/Smart%20pH%20Monitoring%20System/IMG_8077.jpg)
-![Build Photo 2](/_projects/Smart%20pH%20Monitoring%20System/IMG_8079.jpg)
-![Build Photo 3](/_projects/Smart%20pH%20Monitoring%20System/IMG_8084.jpg)
-![Build Photo 4](/_projects/Smart%20pH%20Monitoring%20System/IMG_8087.jpg)
-![Build Photo 5](/_projects/Smart%20pH%20Monitoring%20System/pH1.jpg)
+<img src="/_projects/Smart%20pH%20Monitoring%20System/IMG_8077.jpg" width="500">
+<img src="/_projects/Smart%20pH%20Monitoring%20System/IMG_8079.jpg" width="500">
+<img src="/_projects/Smart%20pH%20Monitoring%20System/IMG_8084.jpg" width="500">
+<img src="/_projects/Smart%20pH%20Monitoring%20System/IMG_8087.jpg" width="500">
+<img src="/_projects/Smart%20pH%20Monitoring%20System/pH1.jpg" width="500">
 
