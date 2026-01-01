@@ -13,7 +13,7 @@ main-image: /project.webp
 
 ## Project Overview
 
-This project is a small automated system that controls the pH of a liquid. A pH sensor continuously measures the solution, and an Arduino decides whether to add acid or base. Once powered on, the system runs without any user input.
+This project is an automated system that controls the pH of a liquid. A pH sensor continuously measures the solution, and an Arduino decides whether to add acid or base. Once powered on, the system runs without user input.
 
 ## How It Works
 
@@ -30,7 +30,7 @@ Each pump runs for a short time to avoid overcorrecting.
 - pH sensor module  
 - Two pumps (acid and base)  
 - Tubing and containers for chemicals  
-- Power supply and basic wiring  
+- Power supply and wiring  
 
 Acid and base are stored in separate containers, each with its own pump and tubing.
 
@@ -42,3 +42,10 @@ The system was tested by manually changing the pH of the liquid. The sensor dete
 
 The final system demonstrates automatic sensing, decision-making, and actuation to maintain pH without manual intervention.
 
+## Build Photos
+
+![Build Photo 1](IMG_8077.jpg)
+![Build Photo 2](IMG_8079.jpg)
+![Build Photo 3](IMG_8084.jpg)
+![Build Photo 4](IMG_8087.jpg)
+![Build Photo 5](pH1.jpg)
