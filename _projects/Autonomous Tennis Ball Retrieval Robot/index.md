@@ -8,7 +8,7 @@ skills:
 - 3D Printing
 - Engineering Drawing & GD&T
 - COTS Component Integration
-main-image: /project.webp
+main-image: /CHP PIC 1.png
 ---
 ## Mechanical Function
 
