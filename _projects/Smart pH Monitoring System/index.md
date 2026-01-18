@@ -8,7 +8,7 @@ skills:
 - Pumps
 - Electronics
 - Programming
-main-image: /project.webp
+main-image: /phclean.webp
 ---
 
 ## Project Overview
