@@ -8,7 +8,7 @@ skills:
 - Electronics Integration
 - Soldering
 - Flight Tuning
-main-image: /_projects/FeatherQuad/drone_pic1.png
+main-image: /drone_pic1.png
 published: true
 ---
 
