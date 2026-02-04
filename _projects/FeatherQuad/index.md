@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FeatherQuad
-description:This project focuses on designing and virtually testing a custom quadcopter from scratch. The drone’s components, mass, and geometry are defined, then its flight behavior is modeled and tested in MATLAB to verify stable hover and control. A custom 3D-printed frame is designed in SolidWorks and analyzed to ensure it is strong and stiff enough for flight. The goal is to validate the drone’s design through simulation and analysis before building it physically.
+description: This project focuses on designing and virtually testing a custom quadcopter from scratch. The drone’s components, mass, and geometry are defined, then its flight behavior is modeled and tested in MATLAB to verify stable hover and control. A custom 3D-printed frame is designed in SolidWorks and analyzed to ensure it is strong and stiff enough for flight. The goal is to validate the drone’s design through simulation and analysis before building it physically.
 skills:
 - CAD Design
 - 3D Printing
