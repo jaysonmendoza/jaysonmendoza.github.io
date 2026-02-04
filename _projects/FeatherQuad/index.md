@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FeatherQuad
-description: A micro quadcopter built for practice in the 3DPAC Rotary Wing competition. The airframe is fully 3D-printed, and electronics are commercial off-the-shelf (COTS). This project documents the design, printing, wiring, and testing process with regular updates as progress is made.
+description:This project focuses on designing and virtually testing a custom quadcopter from scratch. The drone’s components, mass, and geometry are defined, then its flight behavior is modeled and tested in MATLAB to verify stable hover and control. A custom 3D-printed frame is designed in SolidWorks and analyzed to ensure it is strong and stiff enough for flight. The goal is to validate the drone’s design through simulation and analysis before building it physically.
 skills:
 - CAD Design
 - 3D Printing
@@ -12,26 +12,17 @@ main-image: /drone_pic1.png
 published: true
 ---
 
-## Project Overview
-This project is our micro quadcopter build for practice in the 3DPAC Rotary Wing competition.  
-The airframe will be 3D-printed, and all electronics are commercial off-the-shelf (COTS).  
-
-I will be updating this page regularly as I make progress on the design, printing, wiring, and testing.  
-Check back often to follow along with the build process!
-
----
-
 ## COTS Parts List
 
-| Component                                | Count | Mass (g) | Link | Price (USD)      |
-|------------------------------------------|-------|----------|------|------------------|
-| Racerstar 1103 8000KV Motors             | 4     | ~20      | [Link](https://www.aliexpress.com/item/4001200322569.html) | $25 (set of 4) |
-| 3S 300mAh LiPo Battery                   | 2     | 28 each  | [Link](https://www.aliexpress.com/item/1005003273134562.html) | $18 (2-pack)  |
-| 15A–20A AIO Flight Controller + ESC (F4, BLHeli_S) | 1 | 6 | [Link](https://www.aliexpress.com/item/1005004146572565.html) | $32 |
-| Happymodel EP2 ELRS Receiver             | 1     | 1        | [Link](https://www.aliexpress.com/item/1005002001553303.html) | $15 |
-| Gemfan 1636 Propellers (1.5mm bore)      | 16    | 0.2 each | [Link](https://www.aliexpress.com/item/1005004143726091.html) | $8 |
-| Jumper T-Lite ELRS Transmitter           | 1     | 245      | [Link](https://www.aliexpress.com/item/1005004001243762.html) | $40 |
-| iMAX B6 LiPo Balance Charger (Clone)     | 1     | 150      | [Link](https://www.aliexpress.com/item/1005003899475145.html) | $20 |
-| **Total (Full Kit)**                     | —     | —        | —    | **$158**         |
+| Item | Qty | Unit Price (USD) | Total Price (USD) | Notes |
+|------|-----|------------------|-------------------|-------|
+| Transmitter + Receiver (Radiolink T8FB + R8EF) | 1 | 49.99 | 49.99 | 8-channel 2.4 GHz RC system |
+| Battery | 1 | 11.72 | 11.72 | 4S 1500 mAh 80C LiPo (XT60) |
+| Flight Controller | 1 | 33.99 | 33.99 | HGLRC F405 8S V1, ICM42688P |
+| ESC | 1 | 39.99 | 39.99 | SEQURE 65A 4-in-1, 2–6S, AM32 |
+| Propellers | 1 | 9.99 | 9.99 | HQProp 5×4.3×3 (8 pcs, CW/CCW) |
+| Motor | 4 | 15.75 | 62.99 | Axisflying AE2207 V2 1960KV (set of 4) |
+| **Subtotal** | **6 items** | — | **208.67** | Amazon cart total |
+
 ## SolidWorks Screenshot
 <img src="/_projects/FeatherQuad/Screenshot%202026-02-03%20182645.png" alt="SolidWorks Screenshot" style="max-width:100%; height:auto;">
