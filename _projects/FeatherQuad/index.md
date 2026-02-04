@@ -32,13 +32,16 @@ published: true
 <p><strong>Altitude Response (6-DOF Simulation)</strong></p>
 <img src="/_projects/FeatherQuad/Altitude.png" style="max-width:70%; height:auto;">
 
-<p><strong>Roll Response (6-DOF Simulation)</strong></p>
+<p><strong>Roll Response (6-DOF Simulation)</strong><br>
+The response line is not visible at the beginning near x = 0 s due to importing errors and lies along y = 0 radians for the remainder of the simulation.</p>
 <img src="/_projects/FeatherQuad/Roll.png" style="max-width:70%; height:auto;">
 
-<p><strong>Pitch Response (6-DOF Simulation)</strong></p>
+<p><strong>Pitch Response (6-DOF Simulation)</strong><br>
+The response line is not visible at the beginning near x = 0 s due to importing errors and lies along y = 0 radians across the rest of the simulation time.</p>
 <img src="/_projects/FeatherQuad/Pitch.png" style="max-width:70%; height:auto;">
 
-<p><strong>Yaw Response (6-DOF Simulation)</strong></p>
+<p><strong>Yaw Response (6-DOF Simulation)</strong><br>
+The response line is not visible at the beginning near x = 0 s due to importing errors and lies along y = 0 radians for the duration of the simulation.</p>
 <img src="/_projects/FeatherQuad/Yaw.png" style="max-width:70%; height:auto;">
 
 <p><strong>Open-Loop Attitude Dynamics</strong></p>
