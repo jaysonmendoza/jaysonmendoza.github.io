@@ -29,26 +29,27 @@ published: true
 
 ## MATLAB Simulation Results
 
-### Open-Loop Attitude Response
-![Open-loop attitude response](_projects/FeatherQuad/Figure_1.png)
+<p><strong>Altitude Response (6-DOF Simulation)</strong></p>
+<img src="/_projects/FeatherQuad/Altitude.png" style="max-width:70%; height:auto;">
 
-### Closed-Loop Attitude Control
-![Closed-loop attitude control](_projects/FeatherQuad/Figure_2.png)
+<p><strong>Roll Response (6-DOF Simulation)</strong></p>
+<img src="/_projects/FeatherQuad/Roll.png" style="max-width:70%; height:auto;">
 
-### Roll Response
-![Roll response](_projects/FeatherQuad/Roll.png)
+<p><strong>Pitch Response (6-DOF Simulation)</strong></p>
+<img src="/_projects/FeatherQuad/Pitch.png" style="max-width:70%; height:auto;">
 
-### Pitch Response
-![Pitch response](_projects/FeatherQuad/Pitch.png)
+<p><strong>Yaw Response (6-DOF Simulation)</strong></p>
+<img src="/_projects/FeatherQuad/Yaw.png" style="max-width:70%; height:auto;">
 
-### Yaw Response
-![Yaw response](_projects/FeatherQuad/Yaw.png)
+<p><strong>Open-Loop Attitude Dynamics</strong></p>
+<img src="/_projects/FeatherQuad/Figure_1.png" style="max-width:70%; height:auto;">
 
-### Altitude Response
-![Altitude response](_projects/FeatherQuad/Altitude.png)
+<p><strong>Closed-Loop Attitude Control (PD)</strong></p>
+<img src="/_projects/FeatherQuad/Figure_2.png" style="max-width:70%; height:auto;">
 
-### Total Thrust Command
-![Total Thrust Command](_projects/FeatherQuad/Total%20Thrust%20Command.png)
+<p><strong>Total Thrust Command vs Time</strong></p>
+<img src="/_projects/FeatherQuad/Total Thrust Command.png" style="max-width:70%; height:auto;">
+
 
 
 ---
