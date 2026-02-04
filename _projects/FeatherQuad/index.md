@@ -33,3 +33,4 @@ Check back often to follow along with the build process!
 | Jumper T-Lite ELRS Transmitter           | 1     | 245      | [Link](https://www.aliexpress.com/item/1005004001243762.html) | $40 |
 | iMAX B6 LiPo Balance Charger (Clone)     | 1     | 150      | [Link](https://www.aliexpress.com/item/1005003899475145.html) | $20 |
 | **Total (Full Kit)**                     | —     | —        | —    | **$158**         |
+![SolidWorks Screenshot](/_projects/FeatherQuad/Screenshot%202026-02-03%20182645.png)
