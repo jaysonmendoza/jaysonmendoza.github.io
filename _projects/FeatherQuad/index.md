@@ -26,208 +26,70 @@ published: true
 
 ## SolidWorks Screenshot
 <img src="/_projects/FeatherQuad/Screenshot%202026-02-03%20182645.png" alt="SolidWorks Screenshot" style="max-width:100%; height:auto;">
-## MATLAB Validation (Code + Image Placeholders)
 
-This section documents the MATLAB-based virtual validation performed before physical assembly. It includes (1) open-loop attitude dynamics, (2) closed-loop attitude stabilization using PD control, and (3) a full 6-DOF rigid-body simulation with altitude + attitude control.
+## MATLAB Validation
+
+All flight behavior was validated virtually in MATLAB prior to any physical build.
 
 ---
 
-# 1) Open-Loop Attitude Dynamics (No Control)
+### Hover & Thrust Feasibility
+- Hover thrust computed using \( T = mg \)
+- Per-motor hover thrust calculated for a quad configuration
+- Thrust margin verified to be well above minimum requirement
 
-## `attitude_sim.m`
-```matlab
-%% attitude_sim.m
-clear; clc; close all;
+Result: **PASS — sufficient thrust margin**
 
-run dronebasic.m
+---
 
-% State: [phi; theta; psi; p; q; r]
-x = zeros(6,1);
+### Open-Loop Attitude Dynamics
+Uncontrolled roll dynamics were simulated to verify rigid-body equations of motion.
 
-% Constant torque step (open-loop)
-tau = [0.02; 0; 0];   % [N*m] roll torque only
+**Result:** Roll angle diverges as expected for an open-loop rigid body, confirming correct inertia and dynamics modeling.
 
-dt = 0.001;
-t_end = 2;
-N = round(t_end/dt);
+![Open-loop attitude response](_projects/FeatherQuad/Figure_1.png)
 
-X = zeros(6,N);
+---
 
-for k = 1:N
-    phi = x(1); theta = x(2); psi = x(3);
-    p   = x(4); q     = x(5); r   = x(6);
+### Closed-Loop Attitude Control (PD)
+A PD controller was applied to stabilize attitude.
 
-    % Rotational dynamics (decoupled first-pass)
-    p_dot = tau(1)/Ixx;
-    q_dot = tau(2)/Iyy;
-    r_dot = tau(3)/Izz;
+**Result:**  
+- Roll angle converges to reference  
+- Angular rate decays to zero  
+- System is stable and controllable  
 
-    % Kinematics (small-angle approximation)
-    phi_dot   = p;
-    theta_dot = q;
-    psi_dot   = r;
+![PD roll angle tracking](_projects/FeatherQuad/Figure_2.png)
 
-    % Integrate (Euler)
-    x = x + dt*[phi_dot; theta_dot; psi_dot; p_dot; q_dot; r_dot];
-    X(:,k) = x;
-end
+---
 
-t = (0:N-1)*dt;
+### Full 6-DOF Flight Simulation
+A full six-degree-of-freedom rigid-body model was simulated with altitude and attitude control.
 
-figure; plot(t, X(1,:)); grid on;
-xlabel('Time (s)'); ylabel('Roll angle \phi (rad)');
-title('Open-loop roll response to constant torque');
+**Observed behavior:**
+- Altitude rises smoothly and stabilizes at the target
+- Roll, pitch, and yaw remain bounded and stable
+- Total thrust converges to \( mg \)
 
-%% attitude_pd.m
-clear; clc; close all;
+**Results:**
 
-run dronebasic.m
+**Altitude**
+![Altitude response](_projects/FeatherQuad/Altitude.png)
 
-% State: [phi; p]
-x = [0; 0];
+**Roll**
+![Roll response](_projects/FeatherQuad/Roll.png)
 
-phi_ref = 0.2;   % rad target
+**Pitch**
+![Pitch response](_projects/FeatherQuad/Pitch.png)
 
-% PD gains
-Kp = 0.015;      % N*m/rad
-Kd = 0.0030;     % N*m/(rad/s)
+**Yaw**
+![Yaw response](_projects/FeatherQuad/Yaw.png)
 
-dt = 0.001;
-t_end = 2;
-N = round(t_end/dt);
+**Total Thrust Command**
+![Total thrust command](_projects/FeatherQuad/Total%20Thrust%20Command.png)
 
-X = zeros(2,N);
+---
 
-for k = 1:N
-    phi = x(1);
-    p   = x(2);
-
-    % PD control torque
-    tau = Kp*(phi_ref - phi) - Kd*p;
-
-    % Dynamics: Ixx*p_dot = tau
-    p_dot   = tau / Ixx;
-    phi_dot = p;
-
-    % Integrate (Euler)
-    x = x + dt*[phi_dot; p_dot];
-    X(:,k) = x;
-end
-
-t = (0:N-1)*dt;
-
-figure; plot(t, X(1,:)); grid on;
-xlabel('Time (s)'); ylabel('Roll angle \phi (rad)');
-title('Roll angle under PD control');
-
-figure; plot(t, X(2,:)); grid on;
-xlabel('Time (s)'); ylabel('Roll rate p (rad/s)');
-title('Roll rate under PD control');
-
-%% quad_6dof.m
-clear; clc; close all;
-
-run dronebasic.m
-I    = diag([Ixx Iyy Izz]);
-invI = diag([1/Ixx 1/Iyy 1/Izz]);
-
-% Simulation settings
-dt    = 0.001;
-t_end = 8;
-N     = round(t_end/dt);
-t     = (0:N-1)*dt;
-
-% State: [x y z vx vy vz phi theta psi p q r]'
-x = zeros(12,1);
-
-% References
-z_ref     = 1.0;
-phi_ref   = 0.0;
-theta_ref = 0.0;
-psi_ref   = 0.0;
-
-% Altitude PD (with gravity compensation)
-Kpz = 12;     % N/m (effective)
-Kdz = 8;      % N/(m/s)
-
-% Attitude PD (torques)
-Kp_phi   = 0.03;  Kd_p = 0.006;
-Kp_theta = 0.03;  Kd_q = 0.006;
-Kp_psi   = 0.02;  Kd_r = 0.004;
-
-% Logging
-X = zeros(12,N);
-U = zeros(4,N); % [T tau_x tau_y tau_z]
-
-% Rotation helpers (ZYX)
-rotz = @(a)[cos(a) -sin(a) 0; sin(a) cos(a) 0; 0 0 1];
-roty = @(a)[cos(a) 0 sin(a); 0 1 0; -sin(a) 0 cos(a)];
-rotx = @(a)[1 0 0; 0 cos(a) -sin(a); 0 sin(a) cos(a)];
-
-for k = 1:N
-    % Unpack state
-    pos   = x(1:3);
-    vel   = x(4:6);
-    phi   = x(7);  theta = x(8);  psi = x(9);
-    p     = x(10); q     = x(11); r   = x(12);
-
-    % Rotation matrix body->inertial
-    R = rotz(psi)*roty(theta)*rotx(phi);
-
-    % --- CONTROL ---
-    z    = pos(3);
-    zdot = vel(3);
-
-    % Total thrust command (N)
-    Tcmd = m*( g + Kpz*(z_ref - z) + Kdz*(0 - zdot) );
-    if Tcmd < 0, Tcmd = 0; end
-
-    % Torque commands (N*m)
-    tau_x = Kp_phi  *(phi_ref   - phi)   - Kd_p*p;
-    tau_y = Kp_theta*(theta_ref - theta) - Kd_q*q;
-    tau_z = Kp_psi  *(psi_ref   - psi)   - Kd_r*r;
-
-    U(:,k) = [Tcmd; tau_x; tau_y; tau_z];
-
-    % --- DYNAMICS ---
-    thrust_inertial = R * [0;0;Tcmd];
-    acc = (1/m)*thrust_inertial + [0;0;-g];
-
-    omega = [p;q;r];
-    tau   = [tau_x; tau_y; tau_z];
-
-    omega_dot = invI * ( tau - cross(omega, I*omega) );
-
-    % Euler angle rates (ZYX)
-    E = [1 sin(phi)*tan(theta)  cos(phi)*tan(theta);
-         0 cos(phi)            -sin(phi);
-         0 sin(phi)/cos(theta)  cos(phi)/cos(theta)];
-    angles_dot = E*omega;
-
-    % --- INTEGRATE ---
-    xdot = zeros(12,1);
-    xdot(1:3)   = vel;
-    xdot(4:6)   = acc;
-    xdot(7:9)   = angles_dot;
-    xdot(10:12) = omega_dot;
-
-    x = x + dt*xdot;
-    X(:,k) = x;
-end
-
-% Plots
-figure; plot(t, X(3,:)); grid on;
-xlabel('Time (s)'); ylabel('z (m)'); title('Altitude z(t)');
-
-figure; plot(t, X(7,:)); grid on;
-xlabel('Time (s)'); ylabel('\phi (rad)'); title('Roll \phi(t)');
-
-figure; plot(t, X(8,:)); grid on;
-xlabel('Time (s)'); ylabel('\theta (rad)'); title('Pitch \theta(t)');
-
-figure; plot(t, X(9,:)); grid on;
-xlabel('Time (s)'); ylabel('\psi (rad)'); title('Yaw \psi(t)');
-
-figure; plot(t, U(1,:)); grid on;
-xlabel('Time (s)'); ylabel('T (N)'); title('Total Thrust Command T(t)');
+### Conclusion
+MATLAB simulations confirm that the drone design is dynamically feasible, stable under control, and capable of sustained hover, validating the design prior to physical fabrication.
 
