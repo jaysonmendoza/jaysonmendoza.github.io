@@ -27,66 +27,29 @@ published: true
 ## SolidWorks Screenshot
 <img src="/_projects/FeatherQuad/Screenshot%202026-02-03%20182645.png" alt="SolidWorks Screenshot" style="max-width:100%; height:auto;">
 
-## MATLAB Validation
+## MATLAB Simulation Results
 
-All flight behavior was validated virtually in MATLAB prior to any physical build.
-
----
-
-### Hover & Thrust Feasibility
-- Hover thrust computed using \( T = mg \)
-- Per-motor hover thrust calculated for a quad configuration
-- Thrust margin verified to be well above minimum requirement
-
-Result: **PASS — sufficient thrust margin**
-
----
-
-### Open-Loop Attitude Dynamics
-Uncontrolled roll dynamics were simulated to verify rigid-body equations of motion.
-
-**Result:** Roll angle diverges as expected for an open-loop rigid body, confirming correct inertia and dynamics modeling.
-
+### Open-Loop Attitude Response
 ![Open-loop attitude response](_projects/FeatherQuad/Figure_1.png)
 
----
+### Closed-Loop Attitude Control
+![Closed-loop attitude control](_projects/FeatherQuad/Figure_2.png)
 
-### Closed-Loop Attitude Control (PD)
-A PD controller was applied to stabilize attitude.
-
-**Result:**  
-- Roll angle converges to reference  
-- Angular rate decays to zero  
-- System is stable and controllable  
-
-![PD roll angle tracking](_projects/FeatherQuad/Figure_2.png)
-
----
-
-### Full 6-DOF Flight Simulation
-A full six-degree-of-freedom rigid-body model was simulated with altitude and attitude control.
-
-**Observed behavior:**
-- Altitude rises smoothly and stabilizes at the target
-- Roll, pitch, and yaw remain bounded and stable
-- Total thrust converges to \( mg \)
-
-**Results:**
-
-**Altitude**
-![Altitude response](_projects/FeatherQuad/Altitude.png)
-
-**Roll**
+### Roll Response
 ![Roll response](_projects/FeatherQuad/Roll.png)
 
-**Pitch**
+### Pitch Response
 ![Pitch response](_projects/FeatherQuad/Pitch.png)
 
-**Yaw**
+### Yaw Response
 ![Yaw response](_projects/FeatherQuad/Yaw.png)
 
-**Total Thrust Command**
-![Total thrust command](_projects/FeatherQuad/Total%20Thrust%20Command.png)
+### Altitude Response
+![Altitude response](_projects/FeatherQuad/Altitude.png)
+
+### Total Thrust Command
+![Total Thrust Command](_projects/FeatherQuad/Total%20Thrust%20Command.png)
+
 
 ---
 
