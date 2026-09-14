@@ -9,7 +9,7 @@ skills:
 - Static Structural Analysis
 - Modal Analysis
 
-main-image: ./deformation.png
+main-image: /_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/drone-banner.png
 ---
 
 ## Project Overview
@@ -22,24 +22,24 @@ Static structural analysis was used to evaluate the deformation and stress in th
 
 ### Mesh
 
-<img src="./mesh.png" width="700">
+<img src="/_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/mesh.png" width="700">
 
 ### Total Deformation
 
 The maximum total deformation was approximately **3.02 mm**.
 
-<img src="./deformation.png" width="700">
+<img src="/_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/deformation.png" width="700">
 
 ### Equivalent Stress
 
 Von Mises stress was analyzed to identify the areas of the frame experiencing the highest stress.
 
-<img src="./stress.png" width="700">
+<img src="/_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/stress.png" width="700">
 
 ### Simulation
 
 <video width="700" controls>
-  <source src="./static_structural.mp4" type="video/mp4">
+  <source src="/_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/static_structural.mp4" type="video/mp4">
 </video>
 
 ## Modal Analysis
@@ -49,5 +49,5 @@ Modal analysis was used to determine the natural frequencies and vibration modes
 The different modes show how the frame naturally bends and twists at different frequencies.
 
 <video width="700" controls>
-  <source src="./modal_analysis.mp4" type="video/mp4">
+  <source src="/_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/modal_analysis.mp4" type="video/mp4">
 </video>
