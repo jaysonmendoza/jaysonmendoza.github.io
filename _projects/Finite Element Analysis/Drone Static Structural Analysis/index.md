@@ -9,7 +9,7 @@ skills:
 - Static Structural Analysis
 - Modal Analysis
 
-main-image: /_projects/Finite%20Element%20Analysis/Drone%20Static%20Structural%20Analysis/drone-banner.png
+main-image: /Drone%20Static%20Structural%20Analysis/drone-banner.png
 ---
 
 ## Project Overview
